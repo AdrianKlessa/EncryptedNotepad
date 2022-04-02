@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentPassword">
+
+    <fragment
+        android:id="@+id/fragmentPassword"
+        android:name="com.example.mynotepad.FragmentPassword"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password" >
+        <action
+            android:id="@+id/action_fragmentPassword_to_fragmentNote"
+            app:destination="@id/fragmentNote" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentChangePassword"
+        android:name="com.example.mynotepad.FragmentChangePassword"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_fragmentChangePassword_to_fragmentNote"
+            app:destination="@id/fragmentNote" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNote"
+        android:name="com.example.mynotepad.FragmentNote"
+        android:label="fragment_note"
+        tools:layout="@layout/fragment_note" >
+        <action
+            android:id="@+id/action_fragmentNote_to_fragmentChangePassword"
+            app:destination="@id/fragmentChangePassword" />
+    </fragment>
+</navigation>
